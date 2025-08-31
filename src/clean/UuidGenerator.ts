@@ -1,0 +1,3 @@
+interface UuidGenerator {
+  create(): string;
+}
