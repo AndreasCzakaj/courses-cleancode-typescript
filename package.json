@@ -7,7 +7,13 @@
     "test0": "vitest",
     "test": "vitest run --coverage",
     "wtest": "vitest watch",
-    "dev-vite": "vite -l info --clearScreen false --host"
+    "dev-vite": "vite -l info --clearScreen false --host",
+    "lint": "eslint '{test,src}/**/*?({c,m}){ts,js}?(x)'",
+    "lint-fix": "eslint '{test,src}/**/*?({c,m}){ts,js}?(x)' --fix",
+    "fix": "npm run lint-fix && npm run style-fix",
+    "style-fix": "prettier --write .",
+    "review": "npm run test && npm run lint && npm run style",
+    "style": "prettier --check ."
   },
   "keywords": [],
   "author": "",
@@ -31,10 +37,15 @@
   "dependencies": {
     "@binary-stars/bs-uuid-generator": "^0.3.0",
     "@types/axios": "^0.14.0",
+    "@typescript-eslint/eslint-plugin": "^8.41.0",
     "axios": "^1.7.2",
     "email-validator": "^2.0.4",
+    "eslint": "^9.34.0",
+    "eslint-config-prettier": "^10.1.8",
     "eventemitter3": "^5.0.1",
+    "jiti": "^2.5.1",
     "lit": "^3.1.4",
+    "prettier": "^3.6.2",
     "uuid": "^10.0.0"
   }
 }
