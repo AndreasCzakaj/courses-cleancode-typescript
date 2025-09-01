@@ -1,4 +1,6 @@
 class Comments1 {
+  constructor(private app: any) {}
+
   init(): void {
     // get the port from env or use default
     const portAsString = process.env.port;
@@ -6,6 +8,6 @@ class Comments1 {
     const port = portAsString == null ? defaultPort : parseInt(portAsString);
 
     // start server on given port
-    console.log(port);
+    this.app.listen(port, () => {})
   }
 }
