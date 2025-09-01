@@ -29,8 +29,8 @@ export default [
       'test/**/*.snap',
       'src/assets/',
       '*.min.js',
-      '.*'
-    ]
+      '.*',
+    ],
   },
   {
     files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx'],
@@ -38,20 +38,20 @@ export default [
       parser: typescriptParser,
       parserOptions: {
         ecmaVersion: 'latest',
-        sourceType: 'module'
-      }
+        sourceType: 'module',
+      },
     },
     plugins: {
-      '@typescript-eslint': typescriptEslint
+      '@typescript-eslint': typescriptEslint,
     },
     rules: {
-      'semi': ['error', 'never'],
+      semi: ['error', 'never'],
       'comma-dangle': [2, 'always-multiline'],
       'no-var': 'error',
       'prefer-const': 'error',
       'no-unused-expressions': 'error',
-      'no-unused-labels': 'error'
-    }
+      'no-unused-labels': 'error',
+    },
   },
-  eslintPluginPrettier
+  eslintPluginPrettier,
 ]
